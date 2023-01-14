@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aplikacja Bluetooth+</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="missing_permissions">Missing permissions</string>
+</resources>

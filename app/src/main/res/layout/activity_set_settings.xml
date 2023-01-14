@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8A6F6F"
+    tools:context=".ui.SetSettingsActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Wybierz jakość podczas przesyłu:"
+        app:layout_constraintBottom_toTopOf="@+id/switchSend"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/photoPNGSend"
+        app:layout_constraintTop_toBottomOf="@+id/switchSend">
+
+        <RadioButton
+            android:id="@+id/radioButtonMinSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Min" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMidSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Średnia" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGoodSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wysoka" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMaxSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Max" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:text="Wybierz jakość podczas zapisu:"
+        app:layout_constraintBottom_toTopOf="@+id/switchSave"
+        app:layout_constraintStart_toStartOf="@+id/photoPNGsave" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/photoPNGsave"
+        app:layout_constraintTop_toBottomOf="@+id/switchSave">
+
+        <RadioButton
+            android:id="@+id/radioButtonMinSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Min" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMidSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Średnia" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGoodSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wysoka" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMaxSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Max" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switchSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toEndOf="@+id/photoPNGSend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/switchSend"
+        app:layout_constraintTop_toTopOf="@+id/photoPNGsave" />
+
+    <ImageButton
+        android:id="@+id/photoJpegSend"
+        android:layout_width="72dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jpeg"
+        app:layout_constraintStart_toEndOf="@+id/switchSend"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <ImageButton
+        android:id="@+id/photoJpegSave"
+        android:layout_width="72dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jpeg"
+        app:layout_constraintBottom_toBottomOf="@+id/photoPNGsave"
+        app:layout_constraintStart_toEndOf="@+id/switchSave" />
+
+    <ImageButton
+        android:id="@+id/photoPNGSend"
+        android:layout_width="72dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pngicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/photoPNGsave"
+        android:layout_width="72dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/photoPNGSend"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSend"
+        app:srcCompat="@drawable/pngicon" />
+
+    <Button
+        android:id="@+id/buttonZatwierdz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="32dp"
+        android:text="Zatwierdź"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupSave"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupAdvanced" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="145dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:text="Opcje zaawansowane\n"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+    <TextView
+        android:id="@+id/textViewAdvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Wielkość pojedyńczej paczki danych, \n wyrażona w bajtach:"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Switch
+        android:id="@+id/switchAdvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupAdvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdvanced">
+
+        <RadioButton
+            android:id="@+id/radioButton200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="200" />
+
+        <RadioButton
+            android:id="@+id/radioButton400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="400" />
+
+        <RadioButton
+            android:id="@+id/radioButton800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="800" />
+
+        <RadioButton
+            android:id="@+id/radioButton1600"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1600" />
+
+        <RadioButton
+            android:id="@+id/radioButton3200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3200" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupSave"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSave"
+        app:srcCompat="@drawable/plus18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
